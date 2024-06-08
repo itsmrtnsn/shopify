@@ -1,4 +1,4 @@
 const MerchantAdminPage = () => {
-  return <div>MerchantAdminPage</div>;
+  return <div></div>;
 };
 export default MerchantAdminPage;

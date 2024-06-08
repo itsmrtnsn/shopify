@@ -11,7 +11,7 @@ import ThemeToggler from './theme-toggler';
 
 const Header = () => {
   return (
-    <section className='font-light shadow-sm dark:border-b mb-5'>
+    <section className='font-light shadow-sm dark:border-b'>
       <div className='flex items-center justify-between h-14 mx-7'>
         <div className='flex items-center gap-7'>
           <p className='font-semibold text-[dodgerblue]'>InStore Admin</p>
