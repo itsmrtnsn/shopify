@@ -1,9 +1,7 @@
+import { cn } from '@/lib/utils';
+import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
-
 export const metadata: Metadata = {
   title: 'Shopify',
   description: 'Everything you need all in one place.',
@@ -16,7 +14,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          'bg-background min-h-screen antialiased',
+          GeistSans.className
+        )}
+      >
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
