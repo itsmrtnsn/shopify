@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils';
 import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
 import './globals.css';
+import { ThemeProvider } from './providers/ThemeProvider';
 export const metadata: Metadata = {
   title: 'Shopify',
   description: 'Everything you need all in one place.',
@@ -20,7 +21,9 @@ export default function RootLayout({
           GeistSans.className
         )}
       >
-        <main>{children}</main>
+        <ThemeProvider attribute='class' defaultTheme='light'>
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );

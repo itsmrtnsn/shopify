@@ -10,7 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 const MerchantAdministratorList = () => {
   return (
     <Select>
-      <SelectTrigger className='w-auto'>
+      <SelectTrigger className='w-auto shadow-none'>
         <SelectValue
           placeholder={
             <p className='flex items-center'>
