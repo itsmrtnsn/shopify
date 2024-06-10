@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { Switch } from '@/components/ui/switch';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
 import { useState } from 'react';
@@ -11,24 +12,12 @@ const ThemeToggler = () => {
 
   return (
     <div>
-      {isLight && (
-        <SunIcon
-          className='w-5 h-5 cursor-pointer transition-all text-zinc-800 dark:text-white'
-          onClick={() => {
-            setTheme('dark');
-            setLight('');
-          }}
-        />
-      )}
-      {!isLight && (
-        <MoonIcon
-          className='w-5 h-5 cursor-pointer transition-all text-zinc-800 dark:text-white '
-          onClick={() => {
-            setTheme('light');
-            setLight('light');
-          }}
-        />
-      )}
+      <Switch
+        onCheckedChange={() => {
+          setTheme(isLight ? 'dark' : 'light');
+          setLight(isLight ? '' : 'light');
+        }}
+      />
       <span className='sr-only'>toggle icon</span>
     </div>
   );

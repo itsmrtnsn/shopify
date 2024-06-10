@@ -1,22 +1,100 @@
 import {
-  ArchiveIcon,
-  AvatarIcon,
-  BarChartIcon,
-  CrumpledPaperIcon,
-  IdCardIcon,
-  MixIcon,
-  PersonIcon,
-  RocketIcon,
-} from '@radix-ui/react-icons';
+  BadgeDollarSign,
+  BadgeHelp,
+  BarChartBig,
+  BellRing,
+  Box,
+  CircleUserRound,
+  Contact,
+  LayoutDashboard,
+  Mail,
+  Settings,
+  Shirt,
+  Store,
+  Truck,
+} from 'lucide-react';
 
-const sidebarLinks = [
-  { id: 1, label: 'Overview', path: '/overview', icon: MixIcon },
-  { id: 2, label: 'User Roles', path: '/user-roles', icon: IdCardIcon },
-  { id: 3, label: 'Customers', path: '/customers', icon: AvatarIcon },
-  { id: 3, label: 'Products', path: '/products', icon: ArchiveIcon },
-  { id: 4, label: 'Orders', path: '/orders', icon: CrumpledPaperIcon },
-  { id: 5, label: 'Sales', path: '/sales', icon: BarChartIcon },
-  { id: 6, label: 'Delivery', path: '/delivery', icon: RocketIcon },
+export const adminDashboardLinks = [
+  {
+    id: 1,
+    label: 'Dashboard',
+    path: '/store/merchants/admin',
+    icon: LayoutDashboard,
+  },
+  {
+    id: 2,
+    label: 'User Roles',
+    path: '/store/merchants/admin/user-roles',
+    icon: CircleUserRound,
+  },
+  {
+    id: 9,
+    label: 'Store',
+    path: '/store/merchants/admin/store-preview',
+    icon: Store,
+  },
+  {
+    id: 3,
+    label: 'Customers',
+    path: '/store/merchants/admin/customers',
+    icon: Contact,
+  },
+  {
+    id: 4,
+    label: 'Products',
+    path: '/store/merchants/admin/products',
+    icon: Shirt,
+  },
+  {
+    id: 5,
+    label: 'Orders',
+    path: '/store/merchants/admin/orders',
+    icon: Box,
+  },
+
+  {
+    id: 7,
+    label: 'Delivery',
+    path: '/store/merchants/admin/delivery',
+    icon: Truck,
+  },
+  {
+    id: 6,
+    label: 'Sales',
+    path: '/store/merchants/admin/sales',
+    icon: BarChartBig,
+  },
+  {
+    id: 8,
+    label: 'Transactions',
+    path: '/store/merchants/admin/delivery',
+    icon: BadgeDollarSign,
+  },
 ];
 
-export default sidebarLinks;
+export const adminStoreLinks = [
+  {
+    id: 1,
+    label: 'Messages',
+    icon: Mail,
+    path: '/store/merchants/admin/Messages',
+  },
+  {
+    id: 2,
+    label: 'Notifications',
+    icon: BellRing,
+    path: '/store/merchants/admin/notifications',
+  },
+  {
+    id: 3,
+    label: 'Settings',
+    icon: Settings,
+    path: 'store/merchants/admin/settings',
+  },
+  {
+    id: 4,
+    label: 'Help Center',
+    icon: BadgeHelp,
+    path: '/store/merchants/admin/help',
+  },
+];

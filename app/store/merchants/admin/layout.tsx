@@ -4,11 +4,13 @@ import SideBar from './components/side-nav';
 
 const MerchantLayOut = ({ children }: PropsWithChildren) => {
   return (
-    <div>
-      <Header />
-      <section className='grid grid-cols-[13rem,1fr] gap-4'>
+    <div className='bg-gray-50'>
+      <section className='grid grid-cols-[13rem,1fr]'>
         <SideBar />
-        {children}
+        <article>
+          <Header />
+        </article>
+        <article>{children}</article>
       </section>
     </div>
   );
