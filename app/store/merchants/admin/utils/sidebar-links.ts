@@ -23,8 +23,8 @@ export const adminDashboardLinks = [
   },
   {
     id: 2,
-    label: 'User Roles',
-    path: '/store/merchants/admin/user-roles',
+    label: 'Users & Roles',
+    path: '/store/merchants/admin/users',
     icon: CircleUserRound,
   },
   {

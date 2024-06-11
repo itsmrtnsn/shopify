@@ -5,7 +5,7 @@ import SideBar from './components/side-nav';
 const MerchantLayOut = ({ children }: PropsWithChildren) => {
   return (
     <div className='bg-gray-50'>
-      <section className='grid grid-cols-[13rem,1fr]'>
+      <section className='grid grid-cols-[15rem,1fr]'>
         <SideBar />
         <article>
           <Header />
