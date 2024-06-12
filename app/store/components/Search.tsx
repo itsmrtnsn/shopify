@@ -13,10 +13,7 @@ const Search = ({ className, placeolder }: Search) => {
   const { isSearched, handleSearch } = useSearch('search');
   return (
     <Input
-      className={cn(
-        'shadow-none text-xs max-w-[20rem] transition-all',
-        className
-      )}
+      className={cn('shadow-none w-[20rem] text-xs transition-all', className)}
       placeholder={
         isSearched ? isSearched : placeolder ? placeolder : 'Search...'
       }

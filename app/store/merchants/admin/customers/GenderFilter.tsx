@@ -9,6 +9,7 @@ import {
 import { cn } from '@/lib/utils';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import useFilter from '../../../hooks/useFilter';
+import { SlidersHorizontal } from 'lucide-react';
 
 const genders = [
   { code: 'male', label: 'Male' },
@@ -32,7 +33,10 @@ const GenderFilter = () => {
       >
         <SelectValue
           placeholder={
-            isFiltered ? 'Filtered by ' + isFiltered : 'Gender Filter'
+            <span className='flex items-center gap-2 text-xs'>
+              <SlidersHorizontal strokeWidth={0.75} size={15} />
+              {isFiltered ? 'Filtered by ' + isFiltered : 'Gender Filter'}
+            </span>
           }
           ref={animationParent}
         />
