@@ -8,7 +8,7 @@ import { adminDashboardLinks, adminStoreLinks } from '../utils/sidebar-links';
 const SideBar = () => {
   const currentPath = usePathname();
   return (
-    <section className='shadow-md bg-white rounded-sm min-h-screen '>
+    <section className='shadow-md bg-gray-50 rounded-sm min-h-screen '>
       <p className='h-14 flex items-center justify-center font-black text-lg text-[dodgerblue] '>
         ZebBusiness Admin
       </p>
@@ -20,7 +20,7 @@ const SideBar = () => {
               <Link
                 href={link.path}
                 className={cn({
-                  'flex items-center my-1 px-2 py-2 rounded-md hover:text-white hover:bg-zinc-700 transition-colors cursor-pointer':
+                  'flex items-center my-1 px-2 py-2 rounded-md hover:text-white hover:bg-zinc-700 cursor-pointer transition-all':
                     true,
                   'bg-black text-white border-l-4 border-l-[dodgerblue]':
                     currentPath == link.path,
