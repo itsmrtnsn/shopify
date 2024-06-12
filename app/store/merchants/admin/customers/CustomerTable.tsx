@@ -9,6 +9,7 @@ import {
 import CustomerBadge, { BadgeType } from './CustomerBadge';
 import CustomerTableHead from './CustomerTableHead';
 import CustomerAvatar from './CustomerAvatar';
+import TableAction from './TableAction';
 
 const customers = [
   {
@@ -96,7 +97,9 @@ const CustomerTable = () => {
               />
             </TableCell>
             <TableCell>{customer.totalOrders}</TableCell>
-            <TableCell>...</TableCell>
+            <TableCell>
+              <TableAction />
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>

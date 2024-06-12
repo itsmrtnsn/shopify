@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Ellipsis } from 'lucide-react';
 
-const CustomerAction = () => {
+const TableAction = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -19,10 +19,8 @@ const CustomerAction = () => {
         <DropdownMenuSeparator />
         <DropdownMenuItem>Detail</DropdownMenuItem>
         <DropdownMenuItem>All Orders</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
 };
-export default CustomerAction;
+export default TableAction;

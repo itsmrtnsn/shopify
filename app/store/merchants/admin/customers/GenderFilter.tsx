@@ -1,3 +1,4 @@
+'use client';
 import {
   Select,
   SelectContent,
@@ -5,7 +6,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { SlidersHorizontal } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
+import useFilter from '../../../hooks/useFilter';
 
 const genders = [
   { code: 'male', label: 'Male' },
@@ -14,21 +17,33 @@ const genders = [
 ];
 
 const GenderFilter = () => {
+  const [animationParent] = useAutoAnimate();
+  const { isFiltered, HandlerFilter } = useFilter('gender');
+
   return (
-    <Select>
-      <SelectTrigger className='w-[180px]'>
+    <Select onValueChange={(value) => HandlerFilter(value)}>
+      <SelectTrigger
+        className={cn(
+          'w-fit py-[0.43rem] text-xs tracking-wide h-fit transition-all ease-in-out ',
+          {
+            'bg-primary text-white py-[0.50rem]': isFiltered,
+          }
+        )}
+      >
         <SelectValue
           placeholder={
-            <span className='flex items-center gap-3 text-xs'>
-              <SlidersHorizontal strokeWidth={0.75} size={15} />
-              Gender Filter
-            </span>
+            isFiltered ? 'Filtered by ' + isFiltered : 'Gender Filter'
           }
+          ref={animationParent}
         />
       </SelectTrigger>
       <SelectContent>
         {genders.map((gender) => (
-          <SelectItem value={gender.code} key={gender.code}>
+          <SelectItem
+            value={gender.code}
+            key={gender.code}
+            className='transition-all ease-in-out  text-sm tracking-wide'
+          >
             {gender.label}
           </SelectItem>
         ))}

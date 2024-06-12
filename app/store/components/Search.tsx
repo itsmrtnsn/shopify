@@ -1,5 +1,8 @@
+'use client';
+
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
+import useSearch from '../hooks/useSearch';
 
 interface Search {
   className?: string;
@@ -7,13 +10,19 @@ interface Search {
 }
 
 const Search = ({ className, placeolder }: Search) => {
+  const { isSearched, handleSearch } = useSearch('search');
   return (
     <Input
       className={cn(
         'shadow-none text-xs max-w-[20rem] transition-all',
         className
       )}
-      placeholder={placeolder ? placeolder : 'Search.....'}
+      placeholder={
+        isSearched ? isSearched : placeolder ? placeolder : 'Search...'
+      }
+      onChange={(event) => {
+        handleSearch(event.target.value);
+      }}
     />
   );
 };
