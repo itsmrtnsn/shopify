@@ -21,7 +21,7 @@ const tableHeaders = [
 ];
 const CustomerTableHead = () => {
   return (
-    <TableRow className='h-12'>
+    <TableRow className='h-12 bg-muted/50 hover:bg-muted/100 transition-all'>
       <TableHead>
         <Checkbox />
       </TableHead>

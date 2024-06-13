@@ -11,7 +11,7 @@ const MerchantLayOut = ({ children }: PropsWithChildren) => {
           <article>
             <Header />
           </article>
-          <article className='m-5'>{children}</article>
+          <article className='mx-5 my-3'>{children}</article>
         </div>
       </section>
     </div>
