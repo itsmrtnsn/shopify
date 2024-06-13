@@ -71,7 +71,7 @@ const customers = [
 
 const CustomerTable = () => {
   return (
-    <Table className='text-xs text-zinc-500'>
+    <Table className='text-xs'>
       <TableHeader className='border-t'>
         <CustomerTableHead />
       </TableHeader>

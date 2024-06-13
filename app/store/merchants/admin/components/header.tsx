@@ -5,7 +5,7 @@ import ThemeToggler from './theme-toggler';
 
 const Header = () => {
   return (
-    <section className='font-light shadow-sm dark:border-b bg-white'>
+    <section className='font-light shadow-sm'>
       <div className='flex items-center justify-between h-14 mx-3'>
         <Button
           variant='outline'

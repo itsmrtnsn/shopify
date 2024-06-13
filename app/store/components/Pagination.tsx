@@ -37,7 +37,7 @@ const Pagination = ({
 
   return (
     <div className='border-t flex items-center justify-between h-[3.5rem] px-3'>
-      <p className='flex items-center text-xs text-zinc-700'>
+      <p className='flex items-center text-xs font-medium text-zinc-300'>
         Total {paginationFor}: {totalItems}
       </p>
       <div className='flex items-center gap-3'>

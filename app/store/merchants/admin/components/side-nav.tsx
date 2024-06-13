@@ -8,21 +8,21 @@ import { adminDashboardLinks, adminStoreLinks } from '../utils/sidebar-links';
 const SideBar = () => {
   const currentPath = usePathname();
   return (
-    <section className='shadow-md bg-gray-50 rounded-sm min-h-screen '>
+    <section className='shadow-md rounded-sm min-h-screen border-r'>
       <p className='h-14 flex items-center justify-center font-black text-lg text-[dodgerblue] '>
         ZebBusiness Admin
       </p>
 
-      <div className='flex  min-h-[90vh] borders  justify-between flex-col  text-sm text-gray-500 mx-5'>
+      <div className='flex min-h-[90vh] borders justify-between flex-col text-sm font-medium mx-5 tracking-wide'>
         <ul>
           {adminDashboardLinks.map((link) => (
             <li key={link.id}>
               <Link
                 href={link.path}
                 className={cn({
-                  'flex items-center my-1 px-2 py-2 rounded-md hover:text-white hover:bg-zinc-700 cursor-pointer transition-all':
+                  'flex items-center my-1 px-2 py-2 rounded-md  hover:bg-indigo-500 cursor-pointer transition-all':
                     true,
-                  'bg-black text-white border-l-4 border-l-[dodgerblue]':
+                  'bg-primary text-white border-l-4 border-l-[dodgerblue]':
                     currentPath == link.path,
                 })}
               >
@@ -42,9 +42,9 @@ const SideBar = () => {
                 <Link
                   href={link.path}
                   className={cn({
-                    'flex items-center my-1 px-2 py-2 rounded-md hover:text-white hover:bg-zinc-700 transition-colors cursor-pointer':
+                    'flex items-center my-1 px-2 py-2 rounded-md hover:text-white hover:bg-indigo-500 transition-colors cursor-pointer':
                       true,
-                    'bg-black text-white': currentPath == link.path,
+                    'bg-primary': currentPath == link.path,
                   })}
                 >
                   <span className='flex items-center gap-2'>
