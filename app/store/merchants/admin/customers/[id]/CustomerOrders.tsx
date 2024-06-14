@@ -18,7 +18,7 @@ const CustomerOrders = () => {
             <Button
               key={button.code}
               variant='outline'
-              className='hover:bg-primary'
+              className='shadow-none font-medium text-xs'
             >
               {button.label}
             </Button>

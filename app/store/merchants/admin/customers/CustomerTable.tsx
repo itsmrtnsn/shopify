@@ -67,28 +67,6 @@ const customers = [
     birthDate: '1975-07-08',
     totalOrders: 30,
   },
-  {
-    customerId: 'C005',
-    firstName: 'Carol',
-    lastName: 'Taylor',
-    gender: 'Female',
-    email: 'carol.taylor@example.com',
-    phoneNumber: '777-888-9999',
-    membership: 'Gold',
-    birthDate: '1975-07-08',
-    totalOrders: 30,
-  },
-  {
-    customerId: 'C005',
-    firstName: 'Carol',
-    lastName: 'Taylor',
-    gender: 'Female',
-    email: 'carol.taylor@example.com',
-    phoneNumber: '777-888-9999',
-    membership: 'Gold',
-    birthDate: '1975-07-08',
-    totalOrders: 30,
-  },
 ];
 
 const CustomerTable = () => {
