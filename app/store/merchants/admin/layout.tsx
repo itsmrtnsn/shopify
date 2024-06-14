@@ -7,12 +7,7 @@ const MerchantLayOut = ({ children }: PropsWithChildren) => {
     <div>
       <section className='grid grid-cols-[15rem,1fr]'>
         <SideBar />
-        <div>
-          <article>
-            <Header />
-          </article>
-          <article className='mx-5 my-3'>{children}</article>
-        </div>
+        <div className='m-5'>{children} </div>
       </section>
     </div>
   );

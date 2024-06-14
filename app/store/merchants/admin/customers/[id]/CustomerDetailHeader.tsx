@@ -6,7 +6,7 @@ import Link from 'next/link';
 const CustomerDetailHeader = () => {
   return (
     <section className='h-14 flex items-center justify-between '>
-      <div className='flex items-center px-1 gap-2'>
+      <div className='flex items-center  gap-2'>
         <Link href='/store/merchants/admin/customers' legacyBehavior>
           <Button className='py-4 px-1' variant='outline'>
             <ChevronLeft size={30} strokeWidth={1} />

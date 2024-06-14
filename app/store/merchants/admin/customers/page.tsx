@@ -4,16 +4,12 @@ import Search from '@/app/store/components/Search';
 import CustomerTable from './CustomerTable';
 import GenderFilter from './GenderFilter';
 import MembershipFilter from './MembershipFilter';
-import CustomerOverView from './CustomerOverView';
 interface Props {
   searchParams: { page: string };
 }
 const CustomerPage = ({ searchParams: { page } }: Props) => {
   return (
     <div>
-      <div className='mb-7'>
-        <CustomerOverView />
-      </div>
       <div className='border rounded-md'>
         <div className='h-[4rem] flex items-center justify-between px-3'>
           <div className='flex items-center gap-3 '>
