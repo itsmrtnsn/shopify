@@ -1,4 +1,3 @@
-import { Checkbox } from '@/components/ui/checkbox';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,14 +16,10 @@ const tableHeaders = [
   { code: 'gender', label: 'Gender' },
   { code: 'phone_number', label: 'Phone Number' },
   { code: 'membership', label: 'Membership' },
-  { code: 'total', label: 'Total Orders' },
 ];
 const CustomerTableHead = () => {
   return (
     <TableRow className='h-12 bg-muted/50 hover:bg-muted/100 transition-all'>
-      <TableHead>
-        <Checkbox />
-      </TableHead>
       {tableHeaders.map((header) => (
         <TableHead key={header.code}>
           {header.code === 'User' ? (

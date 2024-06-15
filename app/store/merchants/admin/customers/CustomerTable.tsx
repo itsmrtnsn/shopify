@@ -1,4 +1,3 @@
-import { Checkbox } from '@/components/ui/checkbox';
 import {
   Table,
   TableBody,
@@ -6,9 +5,9 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import CustomerAvatar from './CustomerAvatar';
 import CustomerBadge, { BadgeType } from './CustomerBadge';
 import CustomerTableHead from './CustomerTableHead';
-import CustomerAvatar from './CustomerAvatar';
 import TableAction from './TableAction';
 
 const customers = [
@@ -79,12 +78,9 @@ const CustomerTable = () => {
         {customers.map((customer) => (
           <TableRow key={customer.customerId} className='h-12'>
             <TableCell>
-              <Checkbox />
-            </TableCell>
-            <TableCell>
               <CustomerAvatar
                 userName='JohnDoe'
-                src='https://github.com/shadcn.pn'
+                src='https://github.com/shadcn.png'
               />
             </TableCell>
             <TableCell>{customer.firstName}</TableCell>
@@ -96,7 +92,6 @@ const CustomerTable = () => {
                 membership={customer.membership.toUpperCase() as BadgeType}
               />
             </TableCell>
-            <TableCell>{customer.totalOrders}</TableCell>
             <TableCell>
               <TableAction />
             </TableCell>

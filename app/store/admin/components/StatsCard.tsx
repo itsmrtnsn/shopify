@@ -14,7 +14,7 @@ const StatsCard = ({ title, description, stats, icon, iconColor }: Props) => {
     <Card key={title} className='shadow-none'>
       <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
         <CardTitle className='text-sm font-medium'>{title}</CardTitle>
-        <Icon name={icon} size={30} strokeWidth={0.75} className={iconColor} />
+        <Icon name={icon} size={30} strokeWidth={1} className={iconColor} />
       </CardHeader>
       <CardContent>
         <div className='text-2xl font-bold'>{stats}</div>
