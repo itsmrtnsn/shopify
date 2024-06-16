@@ -17,51 +17,51 @@ export const adminDashboardLinks = [
   {
     id: 1,
     label: 'OverView',
-    path: '/store/merchants/admin',
+    path: '/store/merchants',
     icon: LayoutDashboard,
   },
   {
     id: 3,
     label: 'Customers',
-    path: '/store/merchants/admin/customers',
+    path: '/store/merchants/customers',
     icon: Contact,
   },
   {
     id: 9,
     label: 'Store',
-    path: '/store/merchants/admin/store',
+    path: '/store/merchants/store',
     icon: Store,
   },
 
   {
     id: 4,
     label: 'Products',
-    path: '/store/merchants/admin/products',
+    path: '/store/merchants/products',
     icon: Shirt,
   },
   {
     id: 5,
     label: 'Orders',
-    path: '/store/merchants/admin/orders',
+    path: '/store/merchants/orders',
     icon: Box,
   },
 
   {
     id: 7,
     label: 'Delivery',
-    path: '/store/merchants/admin/delivery',
+    path: '/store/merchants/delivery',
     icon: Truck,
   },
   {
     id: 6,
     label: 'Sales',
-    path: '/store/merchants/admin/sales',
+    path: '/store/merchants/sales',
     icon: BarChartBig,
   },
   {
     id: 8,
     label: 'Transactions',
-    path: '/store/merchants/admin/transactions',
+    path: '/store/merchants/transactions',
     icon: BadgeDollarSign,
   },
 ];

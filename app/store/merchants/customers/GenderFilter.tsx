@@ -1,5 +1,4 @@
 'use client';
-
 import {
   Select,
   SelectContent,
@@ -9,20 +8,20 @@ import {
 } from '@/components/ui/select';
 import { cn } from '@/lib/utils';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
-import { SlidersHorizontal } from 'lucide-react';
-import useFilter from '../../../hooks/useFilter';
 
-const memberships = [
-  { code: 'bronze', label: 'Bronze' },
-  { code: 'silver', label: 'Silver' },
-  { code: 'gold', label: 'Gold' },
-  { code: 'platinum', label: 'Platinum' },
+import { SlidersHorizontal } from 'lucide-react';
+import useFilter from '../../hooks/useFilter';
+
+const genders = [
+  { code: 'male', label: 'Male' },
+  { code: 'female', label: 'Female' },
+  { code: 'other', label: 'Other' },
 ];
 
-const MembershipFilter = () => {
+const GenderFilter = () => {
   const [animationParent] = useAutoAnimate();
+  const { isFiltered, HandlerFilter } = useFilter('gender');
 
-  const { isFiltered, HandlerFilter } = useFilter('membership');
   return (
     <Select onValueChange={(value) => HandlerFilter(value)}>
       <SelectTrigger
@@ -37,24 +36,24 @@ const MembershipFilter = () => {
           placeholder={
             <span className='flex items-center gap-2 text-xs'>
               <SlidersHorizontal strokeWidth={0.75} size={15} />
-              {isFiltered ? 'Filtered by ' + isFiltered : 'Membership Filter'}
+              {isFiltered ? 'Filtered by ' + isFiltered : 'Gender Filter'}
             </span>
           }
           ref={animationParent}
         />
       </SelectTrigger>
       <SelectContent>
-        {memberships.map((membership) => (
+        {genders.map((gender) => (
           <SelectItem
-            value={membership.code}
-            key={membership.code}
+            value={gender.code}
+            key={gender.code}
             className='transition-all ease-in-out  text-sm tracking-wide'
           >
-            {membership.label}
+            {gender.label}
           </SelectItem>
         ))}
       </SelectContent>
     </Select>
   );
 };
-export default MembershipFilter;
+export default GenderFilter;

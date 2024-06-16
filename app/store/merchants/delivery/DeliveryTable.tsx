@@ -65,7 +65,7 @@ const DeliveryTable = () => {
       </TableHeader>
       <TableBody className='text-xs'>
         {deliveries.map((delivery) => (
-          <TableRow className='h-12 hover:bg-card'>
+          <TableRow className='h-12 hover:bg-card' key={delivery.OrderId}>
             <TableCell>{delivery.OrderId}</TableCell>
             <TableCell>{delivery.OrderDate}</TableCell>
             <TableCell>{delivery.receiver}</TableCell>

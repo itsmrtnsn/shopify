@@ -1,4 +1,4 @@
 const OverViewPage = () => {
-  return <div className='h-[2000px]'>OverViewPage</div>;
+  return <div>OverViewPage</div>;
 };
 export default OverViewPage;
