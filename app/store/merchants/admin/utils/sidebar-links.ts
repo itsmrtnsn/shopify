@@ -4,7 +4,6 @@ import {
   BarChartBig,
   BellRing,
   Box,
-  CircleUserRound,
   Contact,
   LayoutDashboard,
   Mail,
@@ -17,21 +16,9 @@ import {
 export const adminDashboardLinks = [
   {
     id: 1,
-    label: 'Dashboard',
+    label: 'OverView',
     path: '/store/merchants/admin',
     icon: LayoutDashboard,
-  },
-  {
-    id: 2,
-    label: 'Users & Roles',
-    path: '/store/merchants/admin/users',
-    icon: CircleUserRound,
-  },
-  {
-    id: 9,
-    label: 'Store',
-    path: '/store/merchants/admin/store-preview',
-    icon: Store,
   },
   {
     id: 3,
@@ -39,6 +26,13 @@ export const adminDashboardLinks = [
     path: '/store/merchants/admin/customers',
     icon: Contact,
   },
+  {
+    id: 9,
+    label: 'Store',
+    path: '/store/merchants/admin/store',
+    icon: Store,
+  },
+
   {
     id: 4,
     label: 'Products',
@@ -67,7 +61,7 @@ export const adminDashboardLinks = [
   {
     id: 8,
     label: 'Transactions',
-    path: '/store/merchants/admin/delivery',
+    path: '/store/merchants/admin/transactions',
     icon: BadgeDollarSign,
   },
 ];
