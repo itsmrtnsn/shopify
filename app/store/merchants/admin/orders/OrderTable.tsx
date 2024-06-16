@@ -1,15 +1,15 @@
+import TableRows from '@/app/store/admin/components/TableRows';
 import {
   Table,
   TableBody,
   TableCell,
-  TableHead,
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import DeliveryStatus, { DeliveryStatuses } from '../components/DeliveryStatus';
 import OrderStatusBadge, {
   OrderStatuses,
 } from '../components/OrderStatusBadge';
-import DeliveryStatus, { DeliveryStatuses } from '../components/DeliveryStatus';
 
 const orders = [
   {
@@ -58,24 +58,27 @@ const orders = [
     customer: 'Bob Brown',
   },
 ];
-
+const headers = [
+  { code: 'order_id', label: 'Order ID' },
+  { code: 'customer', label: 'Customer' },
+  { code: 'order_date', label: 'Order Date' },
+  { code: 'order_status', label: 'Order Status' },
+  { code: 'payment_status', label: 'Payment Status' },
+  { code: 'delivery_status', label: 'Delivery Status' },
+  { code: 'total_price', label: 'Total Price' },
+];
 const OrderTable = () => {
   return (
-    <Table className='border'>
-      <TableHeader className='bg-muted/50 text-xs'>
-        <TableRow>
-          <TableHead>Order ID</TableHead>
-          <TableHead>Customer</TableHead>
-          <TableHead>Order Date</TableHead>
-          <TableHead>Order Status</TableHead>
-          <TableHead>Payment Method</TableHead>
-          <TableHead>Delivery Status</TableHead>
-          <TableHead>Total Price</TableHead>
-        </TableRow>
+    <Table className='border rounded-sm'>
+      <TableHeader>
+        <TableRows headers={headers} notSorted={['order_id']} />
       </TableHeader>
       <TableBody className='text-xs'>
         {orders.map((order) => (
-          <TableRow className='h-12'>
+          <TableRow
+            className='h-12 hover:bg-card transition-colors'
+            key={order.orderId}
+          >
             <TableCell>{order.orderId}</TableCell>
             <TableCell>{order.customer}</TableCell>
             <TableCell>{order.orderDate}</TableCell>

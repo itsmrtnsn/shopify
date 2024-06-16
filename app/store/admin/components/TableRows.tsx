@@ -9,24 +9,24 @@ import {
 import { TableHead, TableRow } from '@/components/ui/table';
 import { ArrowDownAZ, ArrowDownZA, ChevronsUpDown } from 'lucide-react';
 
-const tableHeaders = [
-  { code: 'User', label: 'User' },
-  { code: 'first_name', label: 'First Name' },
-  { code: 'last_name', label: 'Last Name' },
-  { code: 'gender', label: 'Gender' },
-  { code: 'phone_number', label: 'Phone Number' },
-  { code: 'membership', label: 'Membership' },
-];
-const CustomerTableHead = () => {
+interface Props {
+  headers: { code: string; label: string }[];
+  notSorted?: string[];
+}
+
+const TableRows = ({ headers, notSorted }: Props) => {
   return (
-    <TableRow className='h-12 bg-muted/50 hover:bg-muted/100 transition-all'>
-      {tableHeaders.map((header) => (
-        <TableHead key={header.code}>
-          {header.code === 'User' ? (
-            'User Profile'
+    <TableRow className='h-12 text-xs tracking-wide font-semibold bg-card hover:bg-card'>
+      {headers.map((header) => (
+        <TableHead
+          key={header.code}
+          className='hover:text-gray-800 dark:hover:text-white transition-colors'
+        >
+          {notSorted?.includes(header.code) ? (
+            header.label
           ) : (
             <DropdownMenu>
-              <DropdownMenuTrigger className='flex gap-1 hover:text-black transition-all'>
+              <DropdownMenuTrigger className='flex gap-1 hover:text-g-card'>
                 {header.label}
                 <ChevronsUpDown size={14} strokeWidth={1} />
               </DropdownMenuTrigger>
@@ -48,8 +48,7 @@ const CustomerTableHead = () => {
           )}
         </TableHead>
       ))}
-      <TableHead>Actions</TableHead>
     </TableRow>
   );
 };
-export default CustomerTableHead;
+export default TableRows;

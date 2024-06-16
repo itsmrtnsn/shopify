@@ -21,7 +21,7 @@ export default function RootLayout({
           GeistSans.className
         )}
       >
-        <ThemeProvider attribute='class' defaultTheme='light'>
+        <ThemeProvider attribute='class' defaultTheme='dark'>
           <main>{children}</main>
         </ThemeProvider>
       </body>

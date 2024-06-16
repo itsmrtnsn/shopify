@@ -4,7 +4,7 @@ import Icon from '../../components/Icon';
 interface Props {
   title: string;
   description: string;
-  stats: string;
+  stats: number;
   iconColor: string;
   icon: any;
 }
@@ -17,7 +17,7 @@ const StatsCard = ({ title, description, stats, icon, iconColor }: Props) => {
         <Icon name={icon} size={30} strokeWidth={1} className={iconColor} />
       </CardHeader>
       <CardContent>
-        <div className='text-2xl font-bold'>{stats}</div>
+        <div className='text-2xl font-bold flex items-center'>{stats}</div>
         <p className='text-xs text-muted-foreground'>{description}</p>
       </CardContent>
     </Card>

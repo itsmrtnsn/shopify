@@ -5,28 +5,28 @@ const orderOverview = [
   {
     title: 'Total Oders',
     icon: 'package',
-    totalItems: '4200',
+    totalItems: '9',
     description: 'total orders for toady',
     iconColor: 'text-sky-400',
   },
   {
     title: 'Completed Oders',
     icon: `package-check`,
-    totalItems: '0',
+    totalItems: '1',
     description: 'Completed orders for toady',
     iconColor: 'text-emerald-400',
   },
   {
     title: 'Proccessing Orders',
     icon: 'package-search',
-    totalItems: '50',
+    totalItems: '11',
     description: 'Proccessing orders for toady',
     iconColor: 'text-yellow-400',
   },
   {
     title: 'Canceld Orders',
     icon: 'package-x',
-    totalItems: '400',
+    totalItems: '2',
     description: 'Canceled orders for toady',
     iconColor: 'text-red-400',
   },
@@ -43,7 +43,7 @@ const OrdersOverview = () => {
           <StatsCard
             title={order.title}
             description={order.description}
-            stats={order.totalItems}
+            stats={parseInt(order.totalItems)}
             iconColor={order.iconColor}
             icon={order.icon}
           />

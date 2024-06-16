@@ -1,3 +1,4 @@
+import TableRows from '@/app/store/admin/components/TableRows';
 import {
   Table,
   TableBody,
@@ -7,7 +8,6 @@ import {
 } from '@/components/ui/table';
 import CustomerAvatar from './CustomerAvatar';
 import CustomerBadge, { BadgeType } from './CustomerBadge';
-import CustomerTableHead from './CustomerTableHead';
 import TableAction from './TableAction';
 
 const customers = [
@@ -67,12 +67,24 @@ const customers = [
     totalOrders: 30,
   },
 ];
+const tableHeaders = [
+  { code: 'user_profile', label: 'User Profile' },
+  { code: 'first_name', label: 'First Name' },
+  { code: 'last_name', label: 'Last Name' },
+  { code: 'gender', label: 'Gender' },
+  { code: 'phone_number', label: 'Phone Number' },
+  { code: 'membership', label: 'Membership' },
+  { code: 'actions', label: 'Actions' },
+];
 
 const CustomerTable = () => {
   return (
     <Table className='text-xs'>
       <TableHeader className='border-t'>
-        <CustomerTableHead />
+        <TableRows
+          headers={tableHeaders}
+          notSorted={['user_profile', 'actions']}
+        />
       </TableHeader>
       <TableBody>
         {customers.map((customer) => (

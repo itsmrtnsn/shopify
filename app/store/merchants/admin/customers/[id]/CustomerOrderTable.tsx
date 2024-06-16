@@ -1,8 +1,8 @@
+import TableRows from '@/app/store/admin/components/TableRows';
 import {
   Table,
   TableBody,
   TableCell,
-  TableHead,
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
@@ -55,23 +55,23 @@ const orders = [
     totalPrice: 275.5,
   },
 ];
-
+const customerOrderHeaders = [
+  { code: 'order_id', label: 'Order ID' },
+  { code: 'order_date', label: 'Order Date' },
+  { code: 'order_status', label: 'Order Status' },
+  { code: 'payment_status', label: 'Payment Status' },
+  { code: 'delivery_status', label: 'Delivery Status' },
+  { code: 'total_price', label: 'Total Price' },
+];
 const CustomerOrderTable = () => {
   return (
-    <Table>
-      <TableHeader className='bg-muted/50 text-xs'>
-        <TableRow>
-          <TableHead>Order ID</TableHead>
-          <TableHead>Order Date</TableHead>
-          <TableHead>Order Status</TableHead>
-          <TableHead>Payment Method</TableHead>
-          <TableHead>Delivery Status</TableHead>
-          <TableHead>Total Price</TableHead>
-        </TableRow>
+    <Table className='border'>
+      <TableHeader>
+        <TableRows headers={customerOrderHeaders} notSorted={['order_id']} />
       </TableHeader>
       <TableBody className='text-xs'>
         {orders.map((order) => (
-          <TableRow className='h-12'>
+          <TableRow className='h-12 hover:bg-card'>
             <TableCell>{order.orderId}</TableCell>
             <TableCell>{order.orderDate}</TableCell>
             <TableCell>
