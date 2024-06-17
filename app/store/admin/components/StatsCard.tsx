@@ -11,7 +11,7 @@ interface Props {
 
 const StatsCard = ({ title, description, stats, icon, iconColor }: Props) => {
   return (
-    <Card key={title} className='shadow-none'>
+    <Card className='shadow-none'>
       <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
         <CardTitle className='text-sm font-medium'>{title}</CardTitle>
         <Icon name={icon} size={30} strokeWidth={1} className={iconColor} />

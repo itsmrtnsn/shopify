@@ -41,9 +41,10 @@ const DeliveryOverView = () => {
       <div className='mt-5 grid grid-cols-4 gap-5'>
         {deliveries.map((order) => (
           <StatsCard
+            key={order.title}
             title={order.title}
             description={order.description}
-            stats={order.totalItems}
+            stats={parseInt(order.totalItems)}
             iconColor={order.iconColor}
             icon={order.icon}
           />

@@ -88,7 +88,7 @@ const CustomerTable = () => {
       </TableHeader>
       <TableBody>
         {customers.map((customer) => (
-          <TableRow key={customer.customerId} className='h-12'>
+          <TableRow key={customer.customerId} className='h-12 hover:bg-card'>
             <TableCell>
               <CustomerAvatar
                 userName='JohnDoe'

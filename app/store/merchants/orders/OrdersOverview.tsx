@@ -1,5 +1,6 @@
 import StatsCard from '@/app/store/admin/components/StatsCard';
 import { DateRangePicker } from '@/app/store/components/DateRangePicker';
+import { Fragment } from 'react';
 
 const orderOverview = [
   {
@@ -40,13 +41,15 @@ const OrdersOverview = () => {
       </div>
       <div className='mt-5 grid grid-cols-4 gap-5'>
         {orderOverview.map((order) => (
-          <StatsCard
-            title={order.title}
-            description={order.description}
-            stats={parseInt(order.totalItems)}
-            iconColor={order.iconColor}
-            icon={order.icon}
-          />
+          <Fragment key={order.icon}>
+            <StatsCard
+              title={order.title}
+              description={order.description}
+              stats={parseInt(order.totalItems)}
+              iconColor={order.iconColor}
+              icon={order.icon}
+            />
+          </Fragment>
         ))}
       </div>
     </div>
