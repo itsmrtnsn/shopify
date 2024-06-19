@@ -9,26 +9,24 @@ interface Props {
 }
 const CustomerPage = ({ searchParams: { page } }: Props) => {
   return (
-    <div>
-      <div className='border rounded-md'>
-        <div className='h-[4rem] flex items-center justify-between px-3'>
-          <div className='flex items-center gap-3 '>
-            <Search placeolder='Search Customers...' />
-            <ResetQueryParams />
-          </div>
-          <div className='flex items-center gap-3'>
-            <MembershipFilter />
-            <GenderFilter />
-          </div>
+    <div className='border rounded-md'>
+      <div className='h-[4rem] flex items-center justify-between px-3'>
+        <div className='flex items-center gap-3 '>
+          <Search placeolder='Search Customers...' />
+          <ResetQueryParams />
         </div>
-        <CustomerTable />
-        <Pagination
-          paginationFor='Customers'
-          totalItems={100}
-          pageSize={10}
-          currentPage={parseInt(page) ? parseInt(page) : 1}
-        />
+        <div className='flex items-center gap-3'>
+          <MembershipFilter />
+          <GenderFilter />
+        </div>
       </div>
+      <CustomerTable />
+      <Pagination
+        paginationFor='Customers'
+        totalItems={100}
+        pageSize={10}
+        currentPage={parseInt(page) ? parseInt(page) : 1}
+      />
     </div>
   );
 };
