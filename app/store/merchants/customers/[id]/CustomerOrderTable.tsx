@@ -71,7 +71,7 @@ const CustomerOrderTable = () => {
       </TableHeader>
       <TableBody className='text-xs'>
         {orders.map((order) => (
-          <TableRow className='h-12 hover:bg-card'>
+          <TableRow className='h-12 hover:bg-card' key={order.orderId}>
             <TableCell>{order.orderId}</TableCell>
             <TableCell>{order.orderDate}</TableCell>
             <TableCell>

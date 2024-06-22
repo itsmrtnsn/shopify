@@ -40,9 +40,10 @@ const CustomerOrderOverView = () => {
             <StatsCard
               title={order.title}
               description={order.description}
-              stats={order.totalItems}
+              stats={parseInt(order.totalItems)}
               iconColor={order.iconColor}
               icon={order.icon}
+              key={order.title}
             />
           ))}
         </div>
